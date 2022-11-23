@@ -61,7 +61,7 @@ func (a *API) Request(method, endpoint string, params interface{}, out interface
 			}
 		}
 		u.RawQuery = q.Encode()
-		log.Printf("send request: %v %v", method, u.String())
+		//log.Printf("send request: %v %v", method, u.String())
 		req, err := http.NewRequest(method, u.String(), nil)
 		if err != nil {
 			return err
